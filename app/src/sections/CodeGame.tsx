@@ -65,12 +65,12 @@ export function CodeGame() {
   };
 
   return (
-    <section id="code-game" className="relative py-24 sm:py-32 overflow-hidden">
+    <section id="code-game" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 cyber-grid opacity-30" />
       <div className="relative z-10 section-padding max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <span className="font-mono text-purple text-sm tracking-widest mb-4 block">&lt;CodeQuest /&gt;</span>
-          <h2 className="font-display text-5xl sm:text-6xl font-bold text-white">
+          <h2 className="font-display text-4xl min-[390px]:text-5xl sm:text-6xl font-bold text-white">
             TEST YOUR <span className="gradient-text">CODE IQ</span>
           </h2>
           <p className="font-body text-white/60 mt-3">Five quick JavaScript challenges. Can you get a perfect score?</p>
@@ -94,18 +94,18 @@ export function CodeGame() {
               </button>
             </div>
           ) : (
-            <div className="grid lg:grid-cols-[1.1fr_1fr]">
-              <div className="p-7 sm:p-10 bg-black/40 border-b lg:border-b-0 lg:border-r border-white/10">
+            <div className="grid min-w-0 lg:grid-cols-[1.1fr_1fr]">
+              <div className="min-w-0 p-5 sm:p-10 bg-black/40 border-b lg:border-b-0 lg:border-r border-white/10">
                 <div className="flex items-center justify-between mb-7">
                   <span className="font-mono text-cyan text-sm flex items-center gap-2"><Braces size={18} /> CHALLENGE {index + 1}</span>
                   <span className="font-mono text-white/40 text-sm">SCORE {score}</span>
                 </div>
-                <pre className="min-h-40 flex items-center p-5 rounded-2xl bg-black border border-cyan/20 text-cyan text-sm sm:text-base overflow-x-auto whitespace-pre-wrap">
+                <pre className="min-h-36 sm:min-h-40 flex items-center p-4 sm:p-5 rounded-2xl bg-black border border-cyan/20 text-cyan text-xs sm:text-base overflow-x-auto whitespace-pre-wrap break-words">
                   <code>{challenge.code}</code>
                 </pre>
               </div>
 
-              <div className="p-7 sm:p-10">
+              <div className="min-w-0 p-5 sm:p-10">
                 <h3 className="font-display text-3xl text-white mb-6">{challenge.question}</h3>
                 <div className="space-y-3">
                   {challenge.options.map((option, optionIndex) => {

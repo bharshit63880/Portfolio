@@ -85,6 +85,7 @@ function TiltCard({ children, className = '' }: TiltCardProps) {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
+    if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
     
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -165,7 +166,7 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid min-w-0 md:grid-cols-2 gap-5 sm:gap-8">
           {projectsData.map((project, index) => {
             const Icon = project.icon;
             const isHovered = hoveredProject === project.id;
@@ -181,13 +182,13 @@ export function Projects() {
                 onMouseLeave={() => setHoveredProject(null)}
               >
                 <TiltCard className="h-full">
-                  <div className={`relative group h-full rounded-2xl overflow-hidden glass border border-white/10 hover:border-cyan/30 transition-all duration-500 ${project.id === 5 ? 'lg:grid lg:grid-cols-[1.05fr_1fr]' : 'flex flex-col'}`}>
+                  <div className={`relative group min-w-0 h-full rounded-2xl overflow-hidden glass border border-white/10 hover:border-cyan/30 transition-all duration-500 ${project.id === 5 ? 'lg:grid lg:grid-cols-[1.05fr_1fr]' : 'flex flex-col'}`}>
                     {/* Image Container */}
-                    <div className={`relative overflow-hidden ${project.id === 5 ? 'h-64 lg:h-full lg:min-h-[520px]' : 'h-56 sm:h-64'}`}>
+                    <div className={`relative overflow-hidden ${project.id === 5 ? 'h-52 sm:h-64 lg:h-full lg:min-h-[520px]' : 'h-48 min-[390px]:h-52 sm:h-64'}`}>
                       <img
                         src={project.image}
                         alt={`${project.title} application preview`}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 sm:group-hover:scale-110"
                       />
                       
                       {/* Overlay Gradient */}
@@ -226,7 +227,7 @@ export function Projects() {
                     </div>
                     
                     {/* Content */}
-                    <div className="p-6 sm:p-7 flex flex-col flex-1">
+                    <div className="min-w-0 p-5 sm:p-7 flex flex-col flex-1">
                       {/* Title */}
                       <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-1 group-hover:text-cyan transition-colors">
                         {project.title}
@@ -240,7 +241,7 @@ export function Projects() {
                         {project.description}
                       </p>
 
-                      <div className="grid sm:grid-cols-2 gap-2 mb-5">
+                      <div className="grid min-[420px]:grid-cols-2 gap-2 mb-5">
                         {project.highlights.map((highlight) => (
                           <div key={highlight} className="flex items-start gap-2 text-xs text-white/70">
                             <CheckCircle2 size={14} className={`mt-0.5 shrink-0 text-${project.color}`} />

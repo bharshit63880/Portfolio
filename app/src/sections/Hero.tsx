@@ -48,7 +48,7 @@ export function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-24"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-14 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24"
     >
       {/* Cyber Grid Background */}
       <div className="absolute inset-0 cyber-grid opacity-50" />
@@ -69,37 +69,37 @@ export function Hero() {
         }}
       />
       <div className="relative z-10 section-padding w-full max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid min-w-0 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="min-w-0 text-center lg:text-left">
             {/* Main Heading with Glitch Effect */}
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.15] lg:leading-[1.1] mb-6">
+            <h1 className="font-display text-[2.65rem] min-[390px]:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.05] sm:leading-[1.15] lg:leading-[1.1] mb-5 sm:mb-6 break-words">
               <span className="text-white text-glow-cyan">{displayText}</span>
             </h1>
             
             {/* Subtitle */}
-            <p className="font-mono text-cyan text-sm sm:text-base tracking-widest mb-6">
+            <p className="font-mono text-cyan text-xs min-[390px]:text-sm sm:text-base tracking-[0.12em] sm:tracking-widest mb-6 break-words">
               &lt;Full Stack Developer | MERN Stack & Microservices/&gt;
             </p>
             
             <div className="mb-8 max-w-xl mx-auto lg:mx-0 space-y-4 text-left">
-              <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 Building <span className="text-cyan font-semibold">scalable full-stack applications</span> using React, Node.js, Redis, Kafka and Docker with a strong focus on performance, clean architecture and real-time systems.
               </p>
-              <div className="grid grid-cols-2 gap-3 mt-6">
-                <div className="glass p-4 rounded-xl border border-cyan/20">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-6">
+                <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
                   <p className="text-3xl font-bold text-white">2</p>
                   <p className="text-sm text-gray-400">Full Stack Internships</p>
                 </div>
-                <div className="glass p-4 rounded-xl border border-cyan/20">
+                <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
                   <p className="text-3xl font-bold text-white">3</p>
                   <p className="text-sm text-gray-400">Production Projects</p>
                 </div>
-                <div className="glass p-4 rounded-xl border border-cyan/20">
+                <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
                   <p className="text-3xl font-bold text-white">20+</p>
                   <p className="text-sm text-gray-400">Technologies</p>
                 </div>
-                <div className="glass p-4 rounded-xl border border-cyan/20">
+                <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
                   <p className="text-3xl font-bold text-white">MERN</p>
                   <p className="text-sm text-gray-400">Redis • Kafka • Docker</p>
                 </div>
@@ -107,7 +107,7 @@ export function Hero() {
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
               <button 
                 onClick={() => scrollToSection('#projects')}
                 className="btn-cyber group flex items-center justify-center gap-2 cursor-pointer"
@@ -119,7 +119,7 @@ export function Hero() {
               
               <button 
                 onClick={() => scrollToSection('#connect')}
-                className="relative overflow-hidden px-8 py-4 font-display text-lg tracking-wider uppercase border border-pink/30 text-white hover:border-pink transition-all duration-300 group cursor-pointer"
+                className="relative overflow-hidden px-5 py-3 sm:px-8 sm:py-4 font-display text-base sm:text-lg tracking-wider uppercase border border-pink/30 text-white hover:border-pink transition-all duration-300 group cursor-pointer"
               >
                 <span className="relative z-10">Let&apos;s Connect</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-pink/20 to-purple/20 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -128,7 +128,7 @@ export function Hero() {
               <a
                 href="/Harshit-Bhardwaj-Resume.pdf"
                 download="Harshit-Bhardwaj-Resume.pdf"
-                 className="relative overflow-hidden px-8 py-4 font-display text-lg tracking-wider uppercase border border-purple/40 text-white hover:border-purple transition-all duration-300 group inline-flex items-center justify-center gap-2"
+                 className="relative overflow-hidden px-5 py-3 sm:px-8 sm:py-4 font-display text-base sm:text-lg tracking-wider uppercase border border-purple/40 text-white hover:border-purple transition-all duration-300 group inline-flex items-center justify-center gap-2"
                     >        
                 <Download size={18} className="text-purple group-hover:translate-y-0.5 transition-transform" />
                 Download Resume
@@ -150,7 +150,7 @@ export function Hero() {
           </div>
           
           {/* Right Content - Character Image */}
-          <div className="relative h-[400px] sm:h-[500px] lg:h-[600px]">
+          <div className="relative h-[340px] min-[390px]:h-[380px] sm:h-[500px] lg:h-[600px]">
             {/* Character Image */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div 
@@ -162,7 +162,7 @@ export function Hero() {
                 <img
                   src="/hero-character.png"
                   alt="Developer Avatar"
-                  className="w-64 sm:w-80 lg:w-96 h-auto drop-shadow-2xl"
+                  className="w-56 min-[390px]:w-64 sm:w-80 lg:w-96 h-auto max-w-full drop-shadow-2xl"
                 />
                 
                 {/* Glow behind character */}

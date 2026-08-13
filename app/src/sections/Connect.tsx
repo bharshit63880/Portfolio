@@ -83,7 +83,7 @@ function FloatingIcon({ link, index }: FloatingIconProps) {
       {/* Icon Button */}
       <button
         onClick={handleClick}
-        className={`relative w-20 h-20 rounded-2xl glass flex items-center justify-center transition-all duration-500 group ${
+        className={`relative w-full aspect-square max-w-20 rounded-xl sm:rounded-2xl glass flex items-center justify-center transition-all duration-500 group ${
           isHovered ? `border-${link.color} shadow-glow` : 'border-white/10'
         }`}
         style={{
@@ -96,7 +96,7 @@ function FloatingIcon({ link, index }: FloatingIconProps) {
         
         {/* Icon */}
         <Icon 
-          size={32} 
+          size={28}
           className={`relative z-10 text-white group-hover:text-${link.color} transition-colors duration-300`}
         />
         
@@ -177,7 +177,7 @@ export function Connect() {
     <section
       id="connect"
       ref={sectionRef}
-      className="relative py-24 sm:py-32 overflow-hidden"
+      className="relative py-20 sm:py-32 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 cyber-grid opacity-30" />
@@ -192,7 +192,7 @@ export function Connect() {
           <span className="font-mono text-pink text-sm tracking-widest mb-4 block">
             &lt;Contact /&gt;
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4">
+          <h2 className="font-display text-4xl min-[390px]:text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4">
             LET&apos;S <span className="gradient-text">CONNECT</span>
           </h2>
           <p className="font-body text-white/60 max-w-xl mx-auto">
@@ -200,11 +200,11 @@ export function Connect() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid min-w-0 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Left - Social Links */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Floating Icons */}
-            <div className="flex justify-center gap-6 mb-12">
+            <div className="grid grid-cols-4 gap-2 min-[390px]:gap-3 sm:flex sm:gap-6 justify-center mb-12">
               {socialLinks.map((link, index) => (
                 <FloatingIcon key={link.name} link={link} index={index} />
               ))}
@@ -246,7 +246,7 @@ export function Connect() {
 
           {/* Right - Contact Form */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <form onSubmit={handleSubmit} className="p-8 rounded-2xl glass border border-white/10">
+            <form onSubmit={handleSubmit} className="p-5 sm:p-8 rounded-2xl glass border border-white/10">
               <h3 className="font-display text-2xl text-white mb-6">Send a Message</h3>
               
               <div className="space-y-6">

@@ -41,12 +41,16 @@
   
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: clip;
   }
   
   body {
     @apply bg-black text-white antialiased;
     font-family: 'Space Grotesk', sans-serif;
     overflow-x: hidden;
+    width: 100%;
+    min-width: 0;
   }
   
   ::selection {
@@ -293,5 +297,24 @@ input:focus, textarea:focus {
 @media (max-width: 768px) {
   .section-padding {
     @apply px-4;
+  }
+
+  .btn-cyber {
+    @apply px-5 py-3 text-base;
+  }
+
+  section {
+    min-width: 0;
+  }
+
+  .noise-overlay {
+    opacity: 0.015;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .animate-float,
+  .animate-float-slow {
+    animation-duration: 8s;
   }
 }
