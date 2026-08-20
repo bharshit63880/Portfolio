@@ -149,39 +149,37 @@ export function Hero() {
             </div>
           </div>
           
-          {/* Right Content - Character Image */}
-          <div className="relative h-[340px] min-[390px]:h-[380px] sm:h-[500px] lg:h-[600px]">
-            {/* Character Image */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div 
-                className="relative animate-float-slow"
-                style={{
-                  transform: `perspective(1000px) rotateY(${mousePosition.x * 5}deg) rotateX(${mousePosition.y * -5}deg)`
-                }}
-              >
-                <img
-                  src="/hero-character.png"
-                  alt="Developer Avatar"
-                  className="w-56 min-[390px]:w-64 sm:w-80 lg:w-96 h-auto max-w-full drop-shadow-2xl"
-                />
-                
-                {/* Glow behind character */}
-                <div className="absolute inset-0 -z-10 blur-3xl opacity-50">
-                  <div className="w-full h-full bg-gradient-to-br from-cyan/50 to-purple/50 rounded-full" />
-                </div>
-              </div>
-            </div>
+          {/* Right Content - Camouflaged studio video */}
+          <div className="relative isolate h-[340px] min-[390px]:h-[380px] sm:h-[500px] lg:h-[600px] overflow-hidden rounded-[2rem] border border-cyan/10 bg-black/40 shadow-[0_0_80px_rgba(0,240,255,0.08)]">
+            <video
+              className="absolute inset-0 h-full w-full object-cover object-center opacity-65 saturate-75 contrast-125"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source src="/hero-studio-walk.mp4" type="video/mp4" />
+            </video>
+
+            {/* Dark cyan/purple camouflage layers keep the video inside the current theme. */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/25 to-black/55" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/70" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(0,240,255,0.13),transparent_45%),radial-gradient(circle_at_72%_70%,rgba(189,0,255,0.16),transparent_42%)] mix-blend-screen" />
+            <div className="absolute inset-0 cyber-grid opacity-25 mix-blend-overlay" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent" />
             
             {/* Floating Elements */}
-            <div className="absolute top-10 right-10 w-16 h-16 border border-cyan/30 rounded-lg animate-float" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute top-10 right-10 z-10 w-16 h-16 border border-cyan/30 bg-black/20 backdrop-blur-sm rounded-lg animate-float" style={{ animationDelay: '0.5s' }}>
               <div className="w-full h-full flex items-center justify-center font-mono text-cyan text-xs">&lt;/&gt;</div>
             </div>
             
-            <div className="absolute bottom-20 left-10 w-12 h-12 border border-pink/30 rounded-full animate-float" style={{ animationDelay: '1s' }}>
+            <div className="absolute bottom-20 left-10 z-10 w-12 h-12 border border-pink/30 bg-black/20 backdrop-blur-sm rounded-full animate-float" style={{ animationDelay: '1s' }}>
               <div className="w-full h-full flex items-center justify-center font-mono text-pink text-xs">{'{}'}</div>
             </div>
             
-            <div className="absolute top-1/3 left-5 w-8 h-8 border border-purple/30 rotate-45 animate-float" style={{ animationDelay: '1.5s' }}>
+            <div className="absolute top-1/3 left-5 z-10 w-8 h-8 border border-purple/30 bg-black/20 backdrop-blur-sm rotate-45 animate-float" style={{ animationDelay: '1.5s' }}>
               <div className="w-full h-full flex items-center justify-center font-mono text-purple text-[10px]">[]</div>
             </div>
           </div>
