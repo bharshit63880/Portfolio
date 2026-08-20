@@ -150,9 +150,13 @@ export function Hero() {
           </div>
           
           {/* Right Content - Camouflaged studio video */}
-          <div className="relative isolate h-[340px] min-[390px]:h-[380px] sm:h-[500px] lg:h-[600px] overflow-hidden rounded-[2rem] border border-cyan/10 bg-black/40 shadow-[0_0_80px_rgba(0,240,255,0.08)]">
+          <div className="relative isolate h-[340px] min-[390px]:h-[380px] sm:h-[500px] lg:h-[600px]">
             <video
-              className="absolute inset-0 h-full w-full object-cover object-center opacity-65 saturate-75 contrast-125"
+              className="absolute -inset-6 h-[calc(100%+3rem)] w-[calc(100%+3rem)] object-cover object-center opacity-65 saturate-75 contrast-125"
+              style={{
+                WebkitMaskImage: 'radial-gradient(ellipse at center, black 42%, rgba(0,0,0,0.9) 58%, transparent 82%)',
+                maskImage: 'radial-gradient(ellipse at center, black 42%, rgba(0,0,0,0.9) 58%, transparent 82%)',
+              }}
               autoPlay
               muted
               loop
@@ -164,11 +168,11 @@ export function Hero() {
             </video>
 
             {/* Dark cyan/purple camouflage layers keep the video inside the current theme. */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/25 to-black/55" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/70" />
+            <div className="absolute -inset-6 bg-gradient-to-r from-black/80 via-transparent to-black/55" />
+            <div className="absolute -inset-6 bg-gradient-to-t from-black/90 via-transparent to-black/75" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(0,240,255,0.13),transparent_45%),radial-gradient(circle_at_72%_70%,rgba(189,0,255,0.16),transparent_42%)] mix-blend-screen" />
             <div className="absolute inset-0 cyber-grid opacity-25 mix-blend-overlay" />
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 -left-6 w-32 bg-gradient-to-r from-black via-black/60 to-transparent" />
             
             {/* Floating Elements */}
             <div className="absolute top-10 right-10 z-10 w-16 h-16 border border-cyan/30 bg-black/20 backdrop-blur-sm rounded-lg animate-float" style={{ animationDelay: '0.5s' }}>
