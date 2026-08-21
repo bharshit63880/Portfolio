@@ -3,19 +3,20 @@ import { Briefcase, GraduationCap, Calendar, ChevronRight } from 'lucide-react';
 
 const journeyData = [
    {
-    id: 1,
-    type: 'work',
-    title: 'Freelance Full Stack Developer',
-    company: 'Self-Employed',
-    period: 'Jan 2026 – Present',
-    description: [
-      'Collaborating on MERN stack projects using React.js, Node.js, TypeScript, and MongoDB',
-      'Developing secure REST APIs, authentication systems, and real-time application features',
-      'Working on frontend development, backend integration, database design, testing, and deployment',
-    ],
-    icon: Briefcase,
-    color: 'purple',
-  },
+ {
+  id: 1,
+  type: 'work',
+  title: 'Freelance Full Stack Developer',
+  company: 'Self-Employed',
+  period: 'Jan 2026 – Present',
+  description: [
+    'Building and delivering full-stack web applications using React.js, TypeScript, Node.js, Express.js, and MongoDB',
+    'Developing secure REST APIs, authentication and authorization flows, database integrations, and real-time application features',
+    'Handling end-to-end development including requirement analysis, frontend and backend implementation, testing, debugging, and deployment',
+  ],
+  icon: Briefcase,
+  color: 'purple',
+},
 
 {
   id: 2,
@@ -24,9 +25,9 @@ const journeyData = [
   company: 'DGEN',
   period: 'May 2025 – Oct 2025',
   description: [
-    'Built AI-powered and business-focused web solutions using the MERN stack',
-    'Implemented authentication, role-based access control, and third-party API integrations',
-    'Optimized frontend performance, improved backend scalability, and participated in feature planning and deployment',
+    'Built and maintained full-stack web applications using React.js, Node.js, Express.js, and MongoDB',
+  'Developed secure REST APIs, authentication flows, role-based access control (RBAC), and third-party API integrations',
+  'Improved frontend performance and backend reliability while contributing to feature development, testing, debugging, and production deployment',
   ],
   icon: Briefcase,
   color: 'cyan',
@@ -37,10 +38,9 @@ const journeyData = [
     title: 'B.Tech Computer Science',
     company: 'SRGI Jhansi',
     period: '2022 – 2026',
-    description: [
-      'Pursuing Bachelor of Technology in Computer Science',
-      'Current CGPA: 7.5',
-      'Active in coding competitions and technical events',
+   description: [
+  'Bachelor of Technology in Computer Science & Engineering',
+  'Built multiple full-stack projects and strengthened problem-solving skills through coding and technical activities',
     ],
     icon: GraduationCap,
     color: 'purple',
