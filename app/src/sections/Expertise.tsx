@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Code2, Server, Database, Layers, Cloud, Shield, Zap } from 'lucide-react';
+import { Code2, Server, Database, Zap } from 'lucide-react';
 
 const expertiseData = [
   {
