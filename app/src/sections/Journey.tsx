@@ -3,7 +3,6 @@ import { Briefcase, GraduationCap, Calendar, ChevronRight } from 'lucide-react';
 
 const journeyData = [
    {
- {
   id: 1,
   type: 'work',
   title: 'Freelance Full Stack Developer',
