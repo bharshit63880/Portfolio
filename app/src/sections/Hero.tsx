@@ -84,7 +84,7 @@ export function Hero() {
             
             <div className="mb-8 max-w-xl mx-auto lg:mx-0 space-y-4 text-left">
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                Building <span className="text-cyan font-semibold">scalable full-stack applications</span> using React, Node.js, Redis, Kafka and Docker with a strong focus on performance, clean architecture and real-time systems.
+               Building <span className="text-cyan font-semibold">scalable full-stack and real-time applications</span> using React, TypeScript, Node.js, Redis, Kafka and Docker, with a strong focus on clean architecture, performance and backend engineering.
               </p>
               <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-6">
                 <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
@@ -92,8 +92,8 @@ export function Hero() {
                   <p className="text-sm text-gray-400">Full Stack Internships</p>
                 </div>
                 <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
-                  <p className="text-3xl font-bold text-white">3</p>
-                  <p className="text-sm text-gray-400">Production Projects</p>
+                  <p className="text-3xl font-bold text-white">5+</p>
+                  <p className="text-sm text-gray-400">Full Stack Projects</p>
                 </div>
                 <div className="glass min-w-0 p-3 sm:p-4 rounded-xl border border-cyan/20">
                   <p className="text-3xl font-bold text-white">20+</p>
